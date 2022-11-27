@@ -33,7 +33,7 @@ private User maybeCurrUser;
         model.addAttribute("user",new User());
         model.addAttribute("ceo",ceo);
         //System.out.println(ceo.toString());
-        return "CEOPage";
+        return "CEO";
     }
 
     @PostMapping(value = "/login")
@@ -94,7 +94,7 @@ private User maybeCurrUser;
 
         model.addAttribute("user",maybeCurrUser);
         System.out.println();
-        return "DeveloperPage";
+        return "Developer";
     }
     @GetMapping(value = "/teamLeadPage")
     public String getTeamLeadPage(Model model){
