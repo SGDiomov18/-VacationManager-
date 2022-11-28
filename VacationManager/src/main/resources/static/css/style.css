@@ -1,7 +1,8 @@
 body {
     font-size: 1.4rem;
 
-    background: linear-gradient(176deg, rgb(18, 24, 27) 50%, rgb(32, 39, 55) 100%) fixed;
+    background: linear-gradient(176deg, rgb(20, 20, 20) 50%, rgb(20, 20, 20) 100%) fixed;
+
 }
 
 #popup {
@@ -38,7 +39,7 @@ body {
 
 .headerModal{
     background: #22272c;
-    color: aliceblue;
+
 }
 
 @keyframes slidein-low {
@@ -50,4 +51,300 @@ body {
         top: 11%;
         opacity: 1;
     }
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #e7e7e7;
+    padding: 20px 0;
+}
+form label {
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+input[type="submit"] {
+    background-color: #413b3b;
+    color: #fff;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+
+
+div.container
+{
+    position: absolute;
+    bottom: 85%;
+
+
+}
+
+
+
+div.container a
+{
+    color: #c5c4c4;
+    text-decoration: none;
+    font-size: 23px;
+    font-family: Asap;
+    margin: 0px 10px;
+    padding: 10px 30px;
+    position: relative;
+    cursor: pointer;
+
+
+}
+.HomeDiv{
+
+    position: absolute;
+    transform: translateX(-80px) scale(0.08);
+    top: -240px;
+    left: -210px;
+    opacity: 0.03;
+
+}
+.ShopDiv{
+    position: absolute;
+    transform: translateX(50px) scale(0.08);
+    top: -240px;
+    left: -300px;
+    opacity: 0.03;
+}
+.AboutDiv{
+    position: absolute;
+    transform: translateX(180px) scale(0.08);
+    left: -390px;
+    top: -240px;
+    opacity:0.03;
+}
+.ContactDiv{
+    position: absolute;
+    transform: translateX(310px) scale(0.1);
+    left: -480px;
+    top: -240px;
+    opacity:0.03;
+}
+
+.HomeDiv:hover{
+
+    animation: NavBarAnimation 0.3s ease-in-out forwards;
+}
+
+.ShopDiv:hover{
+    animation: NavBarAnimation 0.3s ease-in-out forwards;
+}
+
+.AboutDiv:hover{
+    animation: NavBarAnimation 0.3s ease-in-out forwards;
+}
+
+.ContactDiv:hover{
+    animation: NavBarAnimation 0.3s ease-in-out forwards;
+}
+
+@keyframes NavBarAnimation {
+    from{
+        opacity: 0.03;
+
+    }
+    to{
+        opacity: 1;
+
+    }
+}
+
+
+
+.topHr{
+    position: absolute;
+    bottom: 80%;
+    transform: translateY(-30px);
+    width: 100px;
+    opacity: 0.1;
+    border-color: #c5c4c4;
+    margin: auto;
+
+
+}
+
+#NavigationBar{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: grid;
+    gap: 250px;
+    grid-template-columns: 50px 50px 50px;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.4) translateX(-70px);
+    animation: NavAnimation 1s ease forwards;
+
+}
+@keyframes NavAnimation {
+    from{
+        opacity: 0;
+        transform: translateY(-60px) translateX(-30px) scale(0.4);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px) translateX(-30px) scale(0.4);
+    }
+
+}
+.circle{
+    height: 200px;
+    width: 200px;
+    background-color: rgba(255,255,255, 0.02);
+    border: 1px solid rgba(255,255,255, 0.05);
+    border-radius: 100px;
+    cursor: pointer;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+}
+
+
+.topHr{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 100%;
+    width: 450px;
+    opacity: 0.02;
+    border-color: #c5c4c4;
+
+
+
+}
+.verticalHr{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    transform: rotate(90deg) translateX(-15px);
+    width: 300px;
+    height: 10px;
+    opacity: 0.5;
+    border-color: #c5c4c4;
+}
+
+.CeoHeader{
+    height: 400px;
+    width: 1000px;
+    background-color: rgba(255,255,255, 0.02);
+    border: 1px solid rgba(255,255,255, 0.05);
+    box-shadow: 2px 2px #232323;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+
+
+
+}
+.CeoText{
+    transform: translateY(-90px) translateX(250px);
+    color: #626262;
+    font-size : 100px;
+    font-family: Candara;
+    opacity: 0;
+    animation: TextAnimation 1s ease forwards;
+    animation-delay: 2s;
+}
+@keyframes TextAnimation {
+    from{
+       opacity: 0;
+        transform: translateY(-200px) translateX(250px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(-90px) translateX(250px);
+    }
+
+}
+.CeoText:hover{
+    color: #ccb059;
+}
+
+.ceoHome{
+    transform: scale(0.49) rotate(0deg);
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    opacity: 0.4;
+    transition: 0.2s;
+
+
+}
+.ceoImage{
+    height:200px;
+    width: 200px;
+    transform: translateX(-250px) translateY(100px);
+    opacity: 0;
+    animation: ImageAnimation 1s ease forwards;
+    animation-delay: 1.5s;
+}
+@keyframes ImageAnimation {
+    from{
+        opacity: 0;
+        transform: translateY(40px) translateX(-250px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(100px) translateX(-250px);
+    }
+
+}
+.ceoEmployees{
+    transform: scale(0.49) rotate(0deg);
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    opacity: 0.4;
+    transition: 0.2s;
+
+}
+.ceoAdd{
+
+    transform: scale(0.49) rotate(0deg);
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    opacity: 0.4;
+    transition: 0.2s;
+
+}
+
+.ceoHome:hover{
+    opacity:1;
+
+}
+.ceoEmployees:hover{
+    opacity:1;
+
+}
+.ceoAdd:hover{
+    opacity:1;
+
 }

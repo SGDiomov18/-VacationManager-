@@ -12,22 +12,22 @@ public class CustomPermissionEvaluator implements PermissionEvaluator {
         if((authentication==null)
                 || (targetDomainObject==null)||
                 !(permission instanceof String)){
-            System.out.println("spinkam");
+            System.out.println("NotWorking");
             return false;
         }
         String targetType=
-        targetDomainObject.getClass().getSimpleName().toUpperCase();
-        System.out.println("Bachkatorstvam");
+                targetDomainObject.getClass().getSimpleName().toUpperCase();
+        System.out.println("Working");
         return hasPrivilege(authentication,targetType,permission.toString().toUpperCase());
     }
 
     @Override
     public boolean hasPermission(Authentication authentication, Serializable targetId, String targetType, Object permission) {
         if ((authentication==null)||(targetType==null)||!(permission instanceof  String)){
-            System.out.println("zaspah");
+            System.out.println("Sleep");
             return false;
         }
-        System.out.println("Bi trqbwalo da rabotq");
+        System.out.println("Working");
         return hasPrivilege(authentication,targetType,permission.toString().toUpperCase());
 
     }
@@ -36,7 +36,7 @@ public class CustomPermissionEvaluator implements PermissionEvaluator {
     private boolean hasPrivilege(Authentication auth,String targetType,String permission){
         for (GrantedAuthority grantedAuthority:auth.getAuthorities()){
             if(grantedAuthority.getAuthority().startsWith(targetType) &&
-            grantedAuthority.getAuthority().contains(permission)){
+                    grantedAuthority.getAuthority().contains(permission)){
                 System.out.println("Ima me");
                 return true;
             }

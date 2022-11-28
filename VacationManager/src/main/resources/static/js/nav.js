@@ -1,3 +1,3 @@
 $(function() {
-    $("#nav-placeholder").load("html/nav.html");
+    $("#nav-placeholder").load("html/Contact.html");
 });

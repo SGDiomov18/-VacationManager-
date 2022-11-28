@@ -27,27 +27,31 @@
     <div class = "square"><a href ="index"> <img src = "img/Home.png" class = "Home"><h1 class = "HiddenText">Home</h1> </a></div>
     <div class = "square"><a style="cursor: pointer;" aria-current="page" data-bs-toggle="modal" data-bs-target="#login"> <img src = "img/login.png" class = "Login"><h1 class = "HiddenText">Login</h1> </a></div>
     <div class = "square"><a style="cursor: pointer;" aria-current="page" data-bs-toggle="modal" data-bs-target="#register"><img src = "img/edit.png" class = "Register"><h1 class = "HiddenText">Register</h1> </a></div>
-    <div class = "square"><img src = "img/Contact.png" class = "Contact"><h1 class = "HiddenText">Contact</h1> </a></div>
+    <div class = "square"><a href = "../static/html/Contact.html"><img src = "img/Contact.png" class = "Contact"><h1 class = "HiddenText">Contact</h1> </a></div>
 
 </div>
 
 
 <hr class = "bottomHr">
-<div class = "Center">
+
 <div aria-hidden="true" aria-labelledby="loginLabel" class="modal fade" id="login" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-
-
+        <div class="modal-content divModal">
+            <div class="headerModal">
 
                 <form id="loginForm" method="post" th:action="@{/login}" th:object="${user}">
+                    <div class="modal-header">
+
+                    </div>
+                    <div class="modal-body">
 
 
-                        <div class = "UsernameField">
+                    <div class = "UsernameField">
                             <input aria-describedby="basic-addon1"  class="form-control"
                                    placeholder="Username"
                                    th:field="*{username}" type="text" required>
-                        </div>
 
+                    </div>
 
                         <div class = "PasswordField">
                             <input autocomplete="password" class="form-control" placeholder="Password"
@@ -55,13 +59,16 @@
                                    type="password" required>
                         </div>
 
+                    </div>
                     <div class="modal-footer">
 
                         <button class="btn btn-primary" id="submit" type="submit">Login</button>
                     </div>
                 </form>
 
-    <div>
+
+            </div>
+        </div>
     </div>
 </div>
 <div aria-hidden="true" aria-labelledby="registerLabel" class="modal fade" id="register" tabindex="-1">
@@ -72,14 +79,12 @@
                 <!--  REGISTER FORM  -->
                 <form action="#" id="registerForm" method="post" th:action="@{/postRegister}" th:object="${user}">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="registerLabel">Register</h1>
 
-                        <kbd class="esc" data-bs-dismiss="modal">esc</kbd>
 
                     </div>
                     <div class="modal-body">
                         <div class="input-group mb-2 ">
-                            <span class="input-group-text">@</span>
+
                             <input aria-describedby="basic-addon1"  class="form-control"
                                    placeholder="Username"
                                    th:field="*{username}" type="text" required>
@@ -87,14 +92,14 @@
                         </div>
                         <div class="input-group mb-2 ">
 
-                            <span class="input-group-text"> &#128274;</span>
+
                             <input autocomplete="password" class="form-control" placeholder="Password"
                                    th:field="*{password}" type="password" required>
 
                         </div>
                         <div class="input-group mb-2 ">
 
-                            <span class="input-group-text"> &#128188;</span>
+
                             <input  class="form-control" placeholder="Company Name"
                                     th:field="*{companyName}" type="text" required>
 

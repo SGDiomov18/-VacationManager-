@@ -15,32 +15,27 @@
     <title>Vacation Manager</title>
 </head>
 
-<body th:if="${ceo.user.role.roleName=='CEO'}">
-    <!---------NAVBAR----------->
-    <nav  class="navbar navbar-expand-lg navbar-dark bg-dark " style="z-index: 98">
-        <div class="container-fluid ">
+<body>
 
-            <button  class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span  class="navbar-toggler-icon"></span>
-            </button>
-            <div  class="collapse navbar-collapse justify-content-center " id="navbarSupportedContent">
-                <ul class=" navbar-nav ">
-                    <li class="nav-item">
-                        <a style="cursor: pointer;" class="nav-link active  mx-3" aria-current="page" href="index">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a style="cursor: pointer;" class="nav-link active  mx-3" aria-current="page" href="allUsers">all users</a>
-                    </li>
-                    <li class="nav-item">
-                        <a style="cursor: pointer;" class="nav-link active mx-3" aria-current="page" data-bs-toggle="modal" data-bs-target="#register">Add Employee</a>
-                    </li>
+                    <div id = "NavigationBar">
 
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!---------NAVBAR----------->
+                        <div class = "circle"><a style="cursor: pointer;" href="index"><img src="/img/Home.png" class = "ceoHome"></a></div>
 
+                        <div class = "circle"> <a style="cursor: pointer;" href="allUsers"><img src = "/img/employees.png" class = "ceoEmployees"></a></div>
+
+                        <div class = "circle"><a style="cursor: pointer;"  data-bs-toggle="modal" data-bs-target="#register"><img src = "/img/add.png" class = "ceoAdd"></a></div>
+
+
+                    </div>
+
+
+                    <div  class = "CeoHeader">
+                        <div>
+                            <img src = "/img/CEO.png" class = "ceoImage">
+                        </div>
+                        <hr class = "verticalHr">
+                        <h1 class = "CeoText">CEO</h1>
+                    </div>
 
     <div aria-hidden="true" aria-labelledby="registerLabel" class="modal fade" id="register" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -50,14 +45,14 @@
                     <!--  REGISTER FORM  -->
                     <form action="#" id="registerForm" method="post" th:action="@{/postAddEmployee}" th:object="${user}">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="registerLabel">Add Employee</h1>
+                            <h1 class="modal-title fs-5" id="registerLabel"><img src = ""></h1>
 
-                            <kbd class="esc" data-bs-dismiss="modal">esc</kbd>
+
 
                         </div>
                         <div class="modal-body">
                             <div class="input-group mb-2 ">
-                                <span class="input-group-text">@</span>
+
                                 <input aria-describedby="basic-addon1"  class="form-control"
                                        placeholder="Username"
                                        th:field="*{username}" type="text" required>
@@ -65,14 +60,14 @@
                             </div>
                             <div class="input-group mb-2 ">
 
-                                <span class="input-group-text"> &#128274;</span>
+
                                 <input autocomplete="password" class="form-control" placeholder="Password"
                                        th:field="*{password}" type="password" required>
 
                             </div>
                             <div class="input-group mb-2 ">
 
-                                <span class="input-group-text"> &#128278;</span>
+
                                 <input  class="form-control" placeholder="Role Name"
                                         th:field="*{role.roleName}" type="text" required>
 
@@ -102,9 +97,7 @@
         </div>
     </div>
 
-    <div th:if="${ceo.user.role.roleName=='CEO'}" style="color:wheat"> CEO</div>
-    <div th:if="${ceo.user.role.roleName=='Team Lead'}" style="color:wheat"> team lead</div>
-    <div th:if="${ceo.user.role.roleName=='Developer'}" style="color:wheat"> developer</div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

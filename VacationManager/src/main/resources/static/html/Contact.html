@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:height="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style/Contact.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <title>Contact</title>
+
+</head>
+
+
+<body>
+
+
+
+
+
+
+
+  <hr class = "topHr">
+
+
+  <input value="DoNotDisturb#2564" id = "discord">
+  <input value="stdiomov@gmail.com" id = "gmail">
+  <div id = "cards">
+
+    <div class = "card"><a href ="https://github.com/SGDiomov18"> <img src = "img/GitHub.png" class = "gitHub"></a></div>
+    <div class = "card"> <a href="https://www.facebook.com/stefan.diomov.9"> <img src = "img/FacebookIcon.png" class = "faceBook"> </a> </div>
+    <div class = "card"><button onclick = "Gmail()"><img src = "img/email.png" class = "eMail"></button></div>
+    <div class = "card"><a href = "https://www.linkedin.com/in/stefan-diomov-789672212/"> <img src = "img/LinkedIn.png" class = "linkedIn"> </a></div>
+    <div class = "card"><a href="https://www.instagram.com/diomovv_artx/"> <img src = "img/Instagram.png" class = "instaGram"></a> </div>
+    <div class = "card"> <button onclick = "Discord()"><img src = "img/DiscordIcon.png" class = "disCord"> </button></div>
+
+  </div>
+
+
+  <hr class = "bottomHr">
+
+
+
+
+
+
+
+
+
+  <script>
+    function Discord() {
+
+      var copyText = document.getElementById("discord");
+
+
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); // For mobile devices
+
+
+      navigator.clipboard.writeText(copyText.value);
+
+
+      alert("Copied the text: " + copyText.value);
+    }
+  </script>
+
+  <script>
+    function Gmail() {
+
+      var copyText = document.getElementById("gmail");
+
+
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); // For mobile devices
+
+
+      navigator.clipboard.writeText(copyText.value);
+
+
+      alert("Copied the text: " + copyText.value);
+    }
+  </script>
+</body>
+
+
+
+
+</html>
