@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
 
         SpringApplication.run(Main.class, args);
-        System.out.println("http://127.0.0.1:8080/");
+        System.out.println("http:/8080/");
     }
 
 }
