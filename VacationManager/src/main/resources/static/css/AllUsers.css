@@ -361,9 +361,14 @@ div.container a
     width: calc(100% - 20px);
     justify-content: center;
     transform: scale(0.7) translateX(250px) translateY(-60px);
-    animation: CardAppearence 1.5s ease forwards;
+    opacity: 0;
+    animation: LabelAnimation 1.5s ease forwards;
     z-index: 1;
+
+
 }
+
+
 .tableFields{
     height: 60px;
     width: 300px;
@@ -376,6 +381,20 @@ div.container a
     cursor: pointer;
     position: relative;
     text-align: center;
+
+
+}
+
+
+@keyframes LabelAnimation {
+    from{
+        transform: scale(0.7) translateX(250px) translateY(-160px);
+        opacity: 0;
+    }
+    to{
+        transform: scale(0.7) translateX(250px) translateY(-60px);
+        opacity: 1;
+    }
 }
 
 .firstHr{
@@ -406,12 +425,6 @@ div.container a
     transform: translateX(1120px) translateY(20px);
 }
 
-.secondTable{
-    display: grid;
-    grid-auto-columns: 50px 50px 50px;
-
-}
-
 tr,td{
     text-align: center;
     justify-content: center;
@@ -420,5 +433,19 @@ tr,td{
     padding-bottom: 40px;
     position: relative;
     bottom: 30px;
+    opacity:0;
     font-family: Candara;
+    animation: TableAnimation 1.5s ease forwards;
+    animation-delay: 1s;
+}
+
+@keyframes TableAnimation {
+    from{
+      opacity: 0;
+        transform: translateY(-50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
