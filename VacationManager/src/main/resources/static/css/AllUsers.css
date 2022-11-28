@@ -200,7 +200,7 @@ div.container a
 @keyframes NavAnimation {
     from{
         opacity: 0;
-        transform: translateY(-60px) translateX(-30px) scale(0.4);
+        transform: translateY(-60px)translateX(-30px) scale(0.4);
     }
     to{
         opacity: 1;
@@ -239,14 +239,14 @@ div.container a
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    transform: rotate(90deg) translateX(-15px);
+    transform: rotate(90deg) translateX(30px);
     width: 300px;
-    height: 10px;
-    opacity: 0.5;
+    opacity: 0.06;
     border-color: #c5c4c4;
 }
 
 .CeoHeader{
+    transform: translateY(250px);
     height: 400px;
     width: 1000px;
     background-color: rgba(255,255,255, 0.02);
@@ -264,28 +264,28 @@ div.container a
 
 }
 .CeoText{
-    transform: translateY(-90px) translateX(650px);
+    transform: translateY(-60px) translateX(570px);
     color: #626262;
-    font-size : 100px;
+    font-size : 80px;
     font-family: Candara;
     opacity: 0;
     animation: TextAnimation 1s ease forwards;
-    animation-delay: 1.5s;
-    width: 200px;
+    animation-delay: 0.6s;
+    width:200px;
 }
 @keyframes TextAnimation {
     from{
-       opacity: 0;
-        transform: translateY(-200px) translateX(650px);
+        opacity: 0;
+        transform: translateY(-120px) translateX(570px);
     }
     to{
         opacity: 1;
-        transform: translateY(-90px) translateX(650px);
+        transform: translateY(-60px) translateX(570px);
     }
 
 }
 .CeoText:hover{
-    color: #cccccc;
+    color: #afafaf;
 }
 
 .ceoHome{
@@ -298,14 +298,16 @@ div.container a
 
 
 }
+
 .ceoImage{
-    height:200px;
-    width: 200px;
-    transform: translateX(-250px) translateY(100px);
+    height:150px;
+    width: 150px;
+    transform: translateX(-250px) translateY(120px) ;
     opacity: 0;
     animation: ImageAnimation 1s ease forwards;
-    animation-delay: 1s;
+    animation-delay: 0.2s;
 }
+
 @keyframes ImageAnimation {
     from{
         opacity: 0;
@@ -313,7 +315,7 @@ div.container a
     }
     to{
         opacity: 1;
-        transform: translateY(100px) translateX(-250px);
+        transform: translateY(120px) translateX(-250px);
     }
 
 }
@@ -348,4 +350,74 @@ div.container a
 .ceoAdd:hover{
     opacity:1;
 
+}
+
+
+.table{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1500px;
+    gap: 70px;
+    width: calc(100% - 20px);
+    justify-content: center;
+    transform: scale(0.7) translateX(250px) translateY(-60px);
+    animation: CardAppearence 1.5s ease forwards;
+    z-index: 1;
+}
+.tableFields{
+    height: 60px;
+    width: 300px;
+    color: #a6a5a5;
+    font-family: "Roboto Light";
+    font-size: 40px;
+    background-color: rgba(255,255,255, 0.02);
+    border: 1px solid rgba(255,255,255, 0.05);
+    border-radius: 500px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+}
+
+.firstHr{
+    width: 500px;
+    transform: rotate(90deg)translateY(-542px) translateX(300px);
+    opacity: 0.4;
+}
+.secondHr{
+    width: 500px;
+    transform: rotate(90deg) translateY(-805px) translateX(284px);
+    opacity: 0.4;
+}
+
+
+.FirstName{
+    position: absolute;
+    color:white;
+    transform: translateX(600px) translateY(20px);
+}
+.LastName{
+    position: absolute;
+    color:white;
+    transform: translateX(860px) translateY(20px);
+}
+.CompanyName{
+    position: absolute;
+    color:white;
+    transform: translateX(1120px) translateY(20px);
+}
+
+.secondTable{
+    display: grid;
+    grid-auto-columns: 50px 50px 50px;
+
+}
+
+tr,td{
+    text-align: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-left: 8px;
+    padding-bottom: 40px;
+    position: relative;
+    bottom: 30px;
 }
