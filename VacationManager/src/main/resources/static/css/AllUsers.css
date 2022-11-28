@@ -368,7 +368,7 @@ div.container a
     height: 60px;
     width: 300px;
     color: #a6a5a5;
-    font-family: "Roboto Light";
+    font-family: Candara;
     font-size: 40px;
     background-color: rgba(255,255,255, 0.02);
     border: 1px solid rgba(255,255,255, 0.05);
@@ -420,4 +420,5 @@ tr,td{
     padding-bottom: 40px;
     position: relative;
     bottom: 30px;
+    font-family: Candara;
 }
